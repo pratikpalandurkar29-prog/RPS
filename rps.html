@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="rps.css">
+</head>
+<body>
+
+  <div class="game-container">
+    <h1>Rock Paper Scissors</h1>
+    
+    <!-- Score Board -->
+    <div class="score-board">
+      <div class="score">
+        <span class="score-label">Player</span>
+        <span id="player-score" class="score-number">0</span>
+      </div>
+      <div class="score">
+        <span class="score-label">Computer</span>
+        <span id="computer-score" class="score-number">0</span>
+      </div>
+    </div>
+
+    <!-- Match Status Text -->
+    <p id="statustext">Choose your weapon to start the match!</p>
+
+    <!-- Choices Container (For Event Delegation) -->
+    <div id="choices-container">
+      <button class="choice-btn" data-choice="rock">
+        <span class="emoji">🪨</span>
+        <span class="label">Rock</span>
+      </button>
+      
+      <button class="choice-btn" data-choice="paper">
+        <span class="emoji">📄</span>
+        <span class="label">Paper</span>
+      </button>
+      
+      <button class="choice-btn" data-choice="scissors">
+        <span class="emoji">✂️</span>
+        <span class="label">Scissors</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="rps.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #000102 0%, #04070c 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+/* Main Layout Card */
+.game-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Scoreboard Layout */
+.score-board {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+}
+
+.score-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #cbd5e1;
+}
+
+.score-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #406d05;
+}
+
+/* Game Info Status */
+#status-text {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  min-height: 27px; /* Prevents layout shifting when text updates */
+  font-weight: 500;
+  color: #f1f5f9;
+}
+
+/* Buttons Container Grid */
+#choices-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* Individual Choice Buttons */
+.choice-btn {
+  background: #ffffff;
+  color: #02060e;
+  border: none;
+  padding: 1.5rem 0;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.choice-btn .emoji {
+  font-size: 2.5rem;
+  transition: transform 0.2s ease;
+}
+
+.choice-btn .label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Interactive Hover States */
+.choice-btn:hover {
+  background: #f8fafc;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.choice-btn:hover .emoji {
+  transform: scale(1.15);
+}
+
+.choice-btn:active {
+  transform: translateY(-2px);
+}
